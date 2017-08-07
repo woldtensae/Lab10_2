@@ -16,5 +16,6 @@ public class Main {
 		AirlineProfit ap = new AirlineProfit();
 		ap.setStrategy(new SinglePrice());
 		System.out.println(ap.returnStrategyProfit(flights));
+		System.out.println("change made");
 	}
 }
