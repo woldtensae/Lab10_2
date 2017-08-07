@@ -12,8 +12,7 @@ public class Main {
 		List<Flight> flights = new ArrayList<Flight>();
 		flights.add(new Flight(250));
 		flights.add( new Flight(200));
-		flights.add( new Flight(247));
-		
+		flights.add( new Flight(247));	
 		AirlineProfit ap = new AirlineProfit();
 		ap.setStrategy(new SinglePrice());
 		System.out.println(ap.returnStrategyProfit(flights));
