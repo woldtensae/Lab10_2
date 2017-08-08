@@ -11,10 +11,13 @@ public class TwoClasses implements StrategyModelInt{
 	public long getRevenue(List<Flight> flights) {
 		long totalTicketSale =0;
 		long netProfit=0;
-		long revenue = 0;
+		long totalNetProfit = 0;
 		for(Flight flight: flights){
-			revenue = (long) ((long) (1/3 * (flight.getNumberOfPassengers())) * (1.5*(BASEPRICE)));
+			totalTicketSale = (long) ((long) (1/3 * (flight.getNumberOfPassengers())) * (1.5*(BASEPRICE)));
+			netProfit = totalTicketSale - FLIGHTCOST;
+			totalNetProfit += netProfit;
+			totalTicketSale = 0; netProfit =0;
 		}
-		return revenue;
+		return totalNetProfit;
 	}
 }
